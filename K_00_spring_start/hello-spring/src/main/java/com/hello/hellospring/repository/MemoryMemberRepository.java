@@ -33,7 +33,7 @@ public class MemoryMemberRepository implements MemberRepository {
                 .findAny();  // 하나라도 찾으면 반환, 끝까지 없으면 null반환
     }
     public void clearStore() {
-        store.clear();
+        store.clear();  // 스토어를 비움
     }
 
 }
