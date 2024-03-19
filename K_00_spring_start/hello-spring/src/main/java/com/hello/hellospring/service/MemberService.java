@@ -2,8 +2,6 @@ package com.hello.hellospring.service;
 
 import com.hello.hellospring.domain.Member;
 import com.hello.hellospring.repository.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +11,7 @@ import java.util.Optional;
  * - 서비스는 비지니스에 의존적으로 네임드 설계
  * - 서비스 롤 : 비지니스를 처리하는
  */
-@Service
+
 public class MemberService {
 
 //    private final MemberRepository memberRepository = new
@@ -25,7 +23,6 @@ public class MemberService {
      * - 직접생성이 아닌 외부에서 넣어 주게 바꾼다.
      * @param memberRepository
      */
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
