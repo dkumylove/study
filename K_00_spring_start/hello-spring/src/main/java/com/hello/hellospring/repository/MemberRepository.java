@@ -7,6 +7,8 @@ import java.util.Optional;
 
 /**
  * 회원 리포지토리 인터페이스
+ * - 서비스보다는 단순히 기계적으로 개발스럽게 네임드 용어사용
+ * - 리포지토리 롤 : 단순히 데이터를 넣어 빼 정도
  */
 public interface MemberRepository {
     Member save(Member member);
