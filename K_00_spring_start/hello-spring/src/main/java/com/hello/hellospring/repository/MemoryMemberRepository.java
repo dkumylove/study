@@ -1,6 +1,7 @@
 package com.hello.hellospring.repository;
 
 import com.hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
@@ -9,6 +10,7 @@ import java.util.*;
  *
  * 회원 리포지토리 메모리 구현체
  */
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
