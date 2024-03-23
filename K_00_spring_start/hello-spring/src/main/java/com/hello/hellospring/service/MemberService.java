@@ -2,6 +2,7 @@ package com.hello.hellospring.service;
 
 import com.hello.hellospring.domain.Member;
 import com.hello.hellospring.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +12,16 @@ import java.util.Optional;
  * - 서비스는 비지니스에 의존적으로 네임드 설계
  * - 서비스 롤 : 비지니스를 처리하는
  */
-
+@Transactional
 public class MemberService {
+
+    /**
+     * @Transactional
+     * 스프링은 해당 클래스의 메서드를 실행할 때 트랜잭션을 시작하고,
+     * 메서드가 정상 종료되면 트랜잭션을 커밋한다.
+     * 만약 런타임 예외가 발생하면 롤백한다.
+     * JPA를 통한 모든 데이터 변경은 트랜잭션 안에서 실행해야 한다.
+     */
 
 //    private final MemberRepository memberRepository = new
 //            MemoryMemberRepository();
