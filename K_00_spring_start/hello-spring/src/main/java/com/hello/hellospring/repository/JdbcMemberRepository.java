@@ -11,6 +11,7 @@ import java.util.Optional;
 
 /**
  * Jdbc 회원 리포지토리
+ * 20년전 방법
  */
 public class JdbcMemberRepository implements MemberRepository {
     private final DataSource dataSource;
