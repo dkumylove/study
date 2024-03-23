@@ -11,6 +11,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/**
+ * 회원 서비스 스프링 통합 테스트
+ */
 @SpringBootTest
 @Transactional
 class MemberServiceIntegrationTest {
