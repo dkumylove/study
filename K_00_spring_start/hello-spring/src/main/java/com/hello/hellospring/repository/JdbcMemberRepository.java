@@ -12,6 +12,12 @@ import java.util.Optional;
 /**
  * Jdbc 회원 리포지토리
  * 20년전 방법
+ *
+ * 개방-폐쇄 원칙(OCP, Open-Closed Principle)
+ * 확장에는 열려있고, 수정, 변경에는 닫혀있다.
+ *
+ * 스프링의 DI (Dependencies Injection)을 사용하면 기존 코드를 전혀 손대지 않고,
+ * 설정만으로 구현 클래스를 변경할 수 있다.
  */
 public class JdbcMemberRepository implements MemberRepository {
     private final DataSource dataSource;
