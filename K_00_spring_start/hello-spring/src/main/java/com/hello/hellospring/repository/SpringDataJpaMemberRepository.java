@@ -21,6 +21,4 @@ public interface SpringDataJpaMemberRepository extends JpaRepository<Member,
  *  - 인터페이스를 통한 기본적인 CRUD
  *  - findByName() , findByEmail() 처럼 메서드 이름 만으로 조회 기능 제공
  *  - 페이징 기능 자동 제공
- *
- *
  */

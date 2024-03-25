@@ -43,18 +43,22 @@ public class MemberService {
      */
     public Long join(Member member) {
 
-        // MemberService 회원 조회 시간 측정 추가
-        long start = System.currentTimeMillis();
+        validateDuplicateMember(member); //중복 회원 검증
+        memberRepository.save(member);
+        return member.getId();
 
-        try {
-            validateDuplicateMember(member); //중복 회원 검증
-            memberRepository.save(member);
-            return member.getId();
-        } finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-            System.out.println("join : " + timeMs + "ms");
-        }
+//        // MemberService 회원 조회 시간 측정 추가
+//        long start = System.currentTimeMillis();
+//
+//        try {
+//            validateDuplicateMember(member); //중복 회원 검증
+//            memberRepository.save(member);
+//            return member.getId();
+//        } finally {
+//            long finish = System.currentTimeMillis();
+//            long timeMs = finish - start;
+//            System.out.println("join : " + timeMs + "ms");
+//        }
 
     }
 
@@ -78,15 +82,16 @@ public class MemberService {
      */
     public List<Member> findMembers() {
 
-        // MemberService 회원 조회 시간 측정 추가
-        long start = System.currentTimeMillis();
-        try {
-            return memberRepository.findAll();
-        } finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-            System.out.println("findMembers " + timeMs + "ms");
-        }
+        return memberRepository.findAll();
+//        // MemberService 회원 조회 시간 측정 추가
+//        long start = System.currentTimeMillis();
+//        try {
+//            return memberRepository.findAll();
+//        } finally {
+//            long finish = System.currentTimeMillis();
+//            long timeMs = finish - start;
+//            System.out.println("findMembers " + timeMs + "ms");
+//        }
 
     }
 
@@ -112,6 +117,10 @@ public class MemberService {
      *  AOP가 필요한 상황
      *  - 모든 메소드의 호출 시간을 측정하고 싶다면?
      *  - 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern)
+     *
+     *  AOP 적용
+     *  - AOP: Aspect Oriented Programming
+     *  - 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern) 분리
      */
 
     /**
