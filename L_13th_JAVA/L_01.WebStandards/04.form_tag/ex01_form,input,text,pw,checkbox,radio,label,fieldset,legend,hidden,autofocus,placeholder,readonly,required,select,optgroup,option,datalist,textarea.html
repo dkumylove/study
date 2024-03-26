@@ -2,9 +2,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <h1>회원가입</h1>
+        <h1 style="color: orange;">회원가입</h1>
         <form name="frm" method="post" action="ex02.html" autocomplete="off">
             <input type="hidden" name="mode" value="join">
             <fieldset>
@@ -63,6 +64,23 @@
                         <label>
                             <input type="checkbox" name="hobby" value="취미3">취미3
                         </label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>지역</dt>
+                    <dd>
+                        <datalist id="locations">
+                            <option value="서울특별시" label="서울"></option>
+                            <option value="경기도" label="경기"></option>
+                            <option value="인천광역시" label="인천"></option>
+                        </datalist>
+                        <input type="text" name="location" list="locations">
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>자기소개</dt>
+                    <dd>
+                        <textarea name="introduction" rows="10" cols="30"></textarea>
                     </dd>
                 </dl>
             </fieldset>
