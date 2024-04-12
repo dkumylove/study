@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 class MyComponent extends Component {
   render() {
+    console.log(this.props);
 
     return (
       <>
