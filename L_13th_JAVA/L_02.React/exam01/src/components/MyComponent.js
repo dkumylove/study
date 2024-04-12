@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const MyComponent = ({ name, num }) => {
 
     return (
@@ -11,6 +13,10 @@ const MyComponent = ({ name, num }) => {
 MyComponent.defaultProps = {
     // 기본값 설정
     name: '기본 이름',
-  };
+};
+
+MyComponent.propTypes = {
+    name: PropTypes.string,
+};
 
 export default MyComponent;
