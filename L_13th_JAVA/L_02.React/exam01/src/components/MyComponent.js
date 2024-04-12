@@ -1,5 +1,5 @@
 const MyComponent = (props) => {
-    console.log(props);
+    console.log(Object.getOwnPropertyDescriptors(props));
     return <div>안녕하세요!, 제 이름은 {props.name}입니다.</div>
 };
 
