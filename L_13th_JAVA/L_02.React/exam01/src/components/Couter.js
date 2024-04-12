@@ -1,9 +1,7 @@
 import { useState } from 'react';
 
 const Counter = () => {
-    const data = useState(0);
-    const number = data[0];
-    const setNumber = data[1];
+    const [number, setNumber] = useState(0);
 };
 
 export default Counter;
