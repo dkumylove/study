@@ -8,4 +8,9 @@ const MyComponent = ({ name, num }) => {
     );
 };
 
+MyComponent.defaultProps = {
+    // 기본값 설정
+    name: '기본 이름',
+  };
+
 export default MyComponent;
