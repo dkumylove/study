@@ -1,9 +1,9 @@
-import MyComponent from './components/MyComponent';
+import MyComponent from './components/MyComponent2';
 
 const App = () => {
   return (
-    <MyComponent>
-      <h1>안녕하세요.</h1>
+    <MyComponent name="이이름" num={3}>
+      <h1>반값습니다.</h1>
     </MyComponent>
     );
 };
