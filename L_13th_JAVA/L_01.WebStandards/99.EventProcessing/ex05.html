@@ -13,14 +13,15 @@
 
             window.addEventListener("DOMContentLoaded", function() {
 
-                const buttonEl = document.getElementById("button");
-                buttonEl.addEventListener("click", handleClick);
-
                 function handleClick() {
                     console.log(this);
                 }
 
                 handleClick = handleClick.bind(person);
+
+                const buttonEl = document.getElementById("button");
+                buttonEl.addEventListener("click", handleClick);
+                
             });
         </script>
         <button type="button" id="button">클릭!</button>
