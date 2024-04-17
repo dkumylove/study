@@ -10,6 +10,8 @@
                 linkEl.addEventListener("click", function(e) {
                     e.preventDefault(); // 기본 동작 취소 
                     console.log("클릭!");
+                    console.log('this', this);
+                    this.style="background: orange;";
                 });
             });
         </script>
