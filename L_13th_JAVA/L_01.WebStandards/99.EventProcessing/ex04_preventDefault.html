@@ -15,9 +15,10 @@
                 });
 
                 const divEl = document.getElementById("div");
-                divEl.addEventListener("click", function(e) {
+                divEl.addEventListener("click", (e) => {  // 화살표함수는 함수가 정의될떄 this가 정의됨 === window
                     console.log("e.target", e.target);  //실제클릭한요소
                     console.log("e.currentTarget", e.currentTarget);  // 이벤트가바인딩된요소 === this
+                    console.log("this", this); // e.currentTarget
                 });
 
             });
