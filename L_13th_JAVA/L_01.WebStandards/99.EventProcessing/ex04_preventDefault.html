@@ -10,7 +10,7 @@
                 linkEl.addEventListener("click", function(e) {
                     e.preventDefault(); // 기본 동작 취소 
                     console.log("클릭!");
-                    console.log('this', this);
+                    console.log('this', this); // 이벤트가 발생한 요소 객체
                     this.style="background: orange;";
                 });
             });
