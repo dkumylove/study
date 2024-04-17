@@ -10,7 +10,14 @@
                 age: 40,
                 showInfo() {
                     console.log(this);
+                },
+                handleEvent() { // person 
+                    console.log("handleEvent", this);
                 }
+
+                // showInfo2 : () => {
+                //     console.log(this);
+                // }
             };
 
 
@@ -25,10 +32,11 @@
                 const buttonEl = document.getElementById("button");
                 //buttonEl.addEventListener("click", handleClick);
 
-                buttonEl.addEventListener("click", function() {
-                    person.showInfo();
-                });
-
+                // buttonEl.addEventListener("click", function() {
+                //     person.showInfo();
+                // });
+                
+                buttonEl.addEventListener("click", person); // person.handleEvent
             });
         </script>
         <button type="button" id="button">클릭!</button>
