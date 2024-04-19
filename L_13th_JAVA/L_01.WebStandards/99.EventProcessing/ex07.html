@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <style>
+            .box {
+                width: 150px;
+                height: 150px;
+                background: orange;
+            }
+
+            .box.on {
+                width: 300px;
+                height: 300px;
+                /*.box.on : 띄어쓰기 안하고 붙여쓰면 하위요소가 아닌 같은 요소에서 포함된 요소를 선택함 : .box 에 하위에 있는 .on이 아닌, .box 에 .on이 포함된 요소 */
+            }
+        </style>
+        <script>
+            window.addEventListener("DOMContentLoaded", function() {
+                const boxEl = document.querySelector(".box");
+                boxEl.addEventListener("mouseenter", function() {
+                    console.log("mouseenter");
+                });
+
+                boxEl.addEventListener("mouseleave", function() {
+                    console.log("mouseleave");
+                });
+
+            });
+        </script>
+        <div class="box"></div>
+    </body>
+</html>
