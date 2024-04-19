@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            window.addEventListener("DOMContentLoaded", function() {
+                const linkEl = document.getElementById("link");
+                linkEl.addEventListener("click", function(e) {
+                    e.preventDefault(); // 기본 동작 취소 
+                    console.log("클릭!");
+                    console.log('this', this); // 이벤트가 발생한 요소 객체
+                    this.style="background: orange;";
+                });
+
+                const divEl = document.getElementById("div");
+                divEl.addEventListener("click", (e) => {  // 화살표함수는 함수가 정의될떄 this가 정의됨 === window
+                    console.log("e.target", e.target);  //실제클릭한요소
+                    console.log("e.currentTarget", e.currentTarget);  // 이벤트가바인딩된요소 === this
+                    console.log("this", this); // e.currentTarget
+                });
+
+            });
+        </script>
+        <a href="https://www.naver.com" id="link">네이버</a>
+
+        <br>
+
+        <div id="div">
+            <span>클릭!</span>
+        </div>
+
+    </body>
+</html>
