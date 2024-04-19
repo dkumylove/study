@@ -21,11 +21,11 @@
             window.addEventListener("DOMContentLoaded", function() {
                 const boxEl = document.querySelector(".box");
                 boxEl.addEventListener("mouseenter", function() {
-                    console.log("mouseenter");
+                    this.classList.add("on"); // on 클래스명 추가
                 });
 
                 boxEl.addEventListener("mouseleave", function() {
-                    console.log("mouseleave");
+                    this.classList.remove("on");  // on 클래스명 제거
                 });
 
             });
