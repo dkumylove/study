@@ -28,8 +28,14 @@
                     this.classList.remove("on");  // on 클래스명 제거
                 });
 
+                const textEl = document.getElementById("text");
+                textEl.addEventListener("keyup", function(e) {
+                    console.log(e);
+                    console.log("keyup", this.value);
+                });
             });
         </script>
         <div class="box"></div>
+        <input type="text" id="text">
     </body>
 </html>
