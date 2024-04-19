@@ -7,6 +7,7 @@ class Color extends Component {
   };
 
   render() {  // 컴포넌트의 필수
+    // this -> Color로 생성된 객체의 주소
 
     // function changeColor(color) {
     //     console.log(this);
